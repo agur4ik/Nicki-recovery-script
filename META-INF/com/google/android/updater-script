@@ -1,0 +1,15 @@
+# Android recovery script by cucumber09@xda
+# 01.2015 - Xperia M
+ui_print("Recovery script by cucumber09@xda");
+ui_print("Preparing files...");
+package_extract_dir("kernel", "/tmp");
+set_perm(0, 0, 0777, "/tmp/dd");
+set_perm(0, 0, 0777, "/tmp/script.sh");
+set_perm(0, 0, 0777, "/tmp/mkbootimg");
+set_perm(0, 0, 0777, "/tmp/unpackbootimg");
+ui_print("Repack kernel...");
+run_program("/tmp/script.sh");
+ui_print("Done!");
+ui_print("Reboot into recovery...");
+run_program("/sbin/reboot", "recovery");
+
