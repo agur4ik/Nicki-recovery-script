@@ -10,5 +10,3 @@ ui_print("Repack kernel...");
 run_program("/tmp/script.sh");
 ui_print("Done!");
 ui_print("Reboot into recovery...");
-run_program("/sbin/reboot", "recovery");
-
