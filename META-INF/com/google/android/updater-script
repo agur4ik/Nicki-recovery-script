@@ -3,7 +3,6 @@
 ui_print("Recovery script by cucumber09@xda");
 ui_print("Preparing files...");
 package_extract_dir("kernel", "/tmp");
-set_perm(0, 0, 0777, "/tmp/dd");
 set_perm(0, 0, 0777, "/tmp/script.sh");
 set_perm(0, 0, 0777, "/tmp/mkbootimg");
 set_perm(0, 0, 0777, "/tmp/unpackbootimg");
